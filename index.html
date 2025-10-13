@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>girishksstn — Girish Sahu | Personal Portfolio</title>
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1720;
+      --muted:#9aa6b2;
+      --accent:#7c5cff;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;background:linear-gradient(180deg,#071018 0%,var(--bg) 100%);color:#e6eef6;margin:0}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1000px;margin:40px auto;padding:28px}
+
+    /* Header */
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5ad7ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071018}
+    nav a{margin-left:18px;font-weight:600;color:var(--muted)}
+    nav a:hover{color:#fff}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:center}
+    .intro h1{font-size:28px;margin:0 0 8px}
+    .intro p{margin:0 0 18px;color:var(--muted);line-height:1.6}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:#071018;padding:10px 14px;border-radius:10px;font-weight:700;box-shadow:0 6px 18px rgba(124,92,255,0.12)}
+    .ghost{border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:10px;color:var(--muted)}
+
+    .profile-card{background:var(--card);padding:18px;border-radius:16px;box-shadow:0 6px 30px rgba(2,6,23,0.6);text-align:center}
+    .profile-card img{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid var(--glass);display:block;margin:8px auto}
+    .profile-card h3{margin:10px 0 4px}
+    .profile-card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Sections */
+    section{margin-top:28px;padding:18px;background:transparent;border-radius:12px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.008));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    /* Skills */
+    .skill-list{display:flex;flex-wrap:wrap;gap:12px}
+    .skill{background:var(--glass);padding:10px 12px;border-radius:10px;font-weight:600;color:var(--muted)}
+
+    /* Projects */
+    .project-list{display:flex;flex-direction:column;gap:12px}
+    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.01);display:flex;justify-content:space-between;align-items:center}
+
+    /* Contact */
+    .socials{display:flex;gap:12px}
+    .social{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);color:var(--muted);font-weight:600}
+
+    footer{text-align:center;color:var(--muted);margin:36px 0 10px;font-size:13px}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .profile-card{order:-1;margin-bottom:14px}
+      .two-col{grid-template-columns:1fr}
+    }
+
+    /* Subtle animations */
+    .fade-up{opacity:0;transform:translateY(10px);transition:all .6s cubic-bezier(.2,.9,.2,1)}
+    .fade-up.show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">GKS</div>
+        <div>
+          <div style="font-weight:700">girish</div>
+          <div style="font-size:12px;color:var(--muted)">Personal Portfolio</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home" class="hero">
+      <div class="intro card fade-up">
+        <h1>Hi, I’m <span style="color:var(--accent)">Girish Sahu</span> 👋</h1>
+        <p>I’m an aspiring Data Scientist and B.Tech student in Artificial Intelligence & Data Science. I build data-driven solutions and enjoy turning ideas into projects using Python and machine learning.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <aside class="profile-card fade-up">
+     
+        <img src="photo.jpg" alt="Girish Sahu — profile photo">
+        <h3>Girish Sahu</h3>
+        <p>Aspiring Data Scientist • Python • ML</p>
+        <div style="margin-top:12px;display:flex;gap:8px;justify-content:center">
+          <a class="social" href="https://github.com/girish-kumar-sahu" target="_blank" rel="noopener">GitHub</a>
+          <a class="social" href="#contact">Contact</a>
+        </div>
+      </aside>
+    </main>
+
+    <section id="about" class="card fade-up">
+      <h2>About Me</h2>
+      <p style="color:var(--muted);line-height:1.6">I’m Girish Sahu, currently pursuing a B.Tech in Artificial Intelligence & Data Science. I’m passionate about using data and machine learning to solve practical problems. I enjoy learning new tools, working on projects that improve my skills, and sharing my code on GitHub.</p>
+    </section>
+
+    <section id="skills" class="card fade-up">
+      <h2>Skills</h2>
+      <div class="skill-list" style="margin-top:12px">
+        <div class="skill">Data Science</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Python</div>
+        <div class="skill">Jupyter Notebook</div>
+        <div class="skill">Pandas</div>
+        <div class="skill">NumPy</div>
+        <div class="skill">Matplotlib</div>
+        <div class="skill">scikit-learn</div>
+        <div class="skill">Git & GitHub</div>
+      </div>
+    </section>
+
+    <section id="projects" class="card fade-up">
+      <h2>Projects</h2>
+      <div class="project-list" style="margin-top:12px">
+        <div class="project">
+          <div>
+            <strong>Explore my GitHub</strong>
+            <div style="color:var(--muted);font-size:13px">Latest data-science & ML projects, notebooks, and small demos.</div>
+          </div>
+          <div>
+            <a class="btn" href="https://github.com/girish-kumar-sahu" target="_blank" rel="noopener">github.com/girish</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="card fade-up">
+      <h2>Education</h2>
+      <div class="two-col" style="margin-top:12px">
+        <div>
+          <strong>B.Tech — Artificial Intelligence & Data Science</strong>
+          <div style="color:var(--muted);margin-top:6px">Currently pursuing (2024 — 2028 expected)</div>
+        </div>
+        <div>
+          <strong>Relevant coursework</strong>
+          <div style="color:var(--muted);margin-top:6px">Fundamentals of ML, Data Structures, Probability & Statistics, Linear Algebra for ML</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card fade-up">
+      <h2>Contact</h2>
+      <p style="color:var(--muted);margin-top:6px">Feel free to reach out or follow me on social platforms.</p>
+      <div style="margin-top:12px" class="socials">
+        <a class="social" href="https://www.linkedin.com/in/girishksahu" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="social" href="https://x.com/girishksahu" target="_blank" rel="noopener">X</a>
+        <a class="social" href="https://instagram.com/girishksstn" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Girish Sahu — Built with HTML, CSS & JS
+    </footer>
+  </div>
+
+  <script>
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('show');
+      })
+    },{threshold:.08});
+    document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+    // Smooth scroll for nav
+    document.querySelectorAll('nav a, .cta a').forEach(a=>{
+      a.addEventListener('click', (ev)=>{
+        const href = a.getAttribute('href');
+        if(href && href.startsWith('#')){
+          ev.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth'});
+        }
+      })
+    });
+  </script>
+</body>
+</html>
